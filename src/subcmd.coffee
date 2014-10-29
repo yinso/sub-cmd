@@ -103,6 +103,16 @@ _localPath = (program, commands, cb) ->
   helper programName, [].concat(commands), null 
 
 search = (program, argv, cb) ->
+  if arguments.length == 0 
+    return cb {error: 'invalid_call_need_3_params'}
+  else if arguments.length == 1
+    cb = program 
+    argv = process.argv
+    program = argv[1]
+  else if arguments.length == 2
+    cb = argv 
+    argv = program 
+    program = argv[1]
   [ program, commands , rest ] = normalize argv 
   if commands.length == 0 
     cb {no_sub_command: program, args: rest}

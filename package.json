@@ -2,7 +2,7 @@
   "author": "YC <yinso.chen@gmail.com>",
   "name": "sub-cmd",
   "description": "A pass through sub command (git-style) runner.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://bitbucket.org/yinso/run-cmd.git"
